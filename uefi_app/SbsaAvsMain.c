@@ -29,6 +29,10 @@
 
 #include "SbsaAvs.h"
 
+#ifdef _AARCH64_BUILD_
+unsigned long __stack_chk_guard = 0xBAAAAAAD;
+unsigned long __stack_chk_fail =  0xBAAFAAAD;
+#endif
 
 UINT32  g_sbsa_level;
 UINT32  g_print_level;
